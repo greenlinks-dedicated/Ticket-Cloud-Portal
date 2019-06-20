@@ -13,6 +13,7 @@ import { EventRoutes } from './events.routing';
 
 import { View_EventsComponent } from './View_Events/View_Events.component';
 import { Create_EventComponent } from './Create_Event/Create_Event.component'
+import { Edit_EventComponent } from './Edit_Event/Edit_Event.component';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ import { Create_EventComponent } from './Create_Event/Create_Event.component'
     ],
     declarations: [
         View_EventsComponent,
-        Create_EventComponent
+        Create_EventComponent,
+        Edit_EventComponent
     ]
 })
 

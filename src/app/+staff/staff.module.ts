@@ -12,6 +12,7 @@ import { StaffRoutes } from './staff.routing';
 
 import { View_StaffComponent } from './View_Staff/View_Staff.component';
 import { Create_MemberComponent } from './Create_Member/Create_Member.component'
+import { Edit_StaffComponent } from './Edit_Staff/Edit_Staff.component'
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { Create_MemberComponent } from './Create_Member/Create_Member.component'
     ],
     declarations: [
         View_StaffComponent,
-        Create_MemberComponent
+        Create_MemberComponent,
+        Edit_StaffComponent
     ]
 })
 

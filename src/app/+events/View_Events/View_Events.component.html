@@ -1,63 +1,125 @@
 <div class="main-content">
   <div class="container-fluid">
+
       <div class="row">
-          <div class="col-md-12">
-              <div class="card">
-                <div class="card-header card-header-primary card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">assignment</i>
-                  </div>
-                  <h4 class="card-title">DataTables.net</h4>
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="card">
+              <div class="card-body">
+    
+                <div class="col-6" hidden>
+                  <mat-form-field>
+                    <mat-select placeholder="Search Member By: " name="searchType" id="searchType"
+                      [(ngModel)]="selectedSearchType" (click)="changeEmpty()" (select)="changeEmpty()">
+                      <mat-option *ngFor="let type of Types" [value]="type.value" (click)="selectSearchType()">
+                        {{ type.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
                 </div>
-                  <div class="card-body">
-                      <div class="toolbar">
-                          <!--        Here you can write extra buttons/actions for the toolbar              -->
-                      </div>
-                      <div class="material-datatables">
-                        <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
-                              <thead>
-                                  <tr>
-                                    <th>{{ dataTable.headerRow[0] }}</th>
-                                    <th>{{ dataTable.headerRow[1] }}</th>
-                                    <th>{{ dataTable.headerRow[2] }}</th>
-                                    <th>{{ dataTable.headerRow[3] }}</th>
-                                    <th>{{ dataTable.headerRow[4] }}</th>
-                                    <th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>
-                                  </tr>
-                              </thead>
-                              <tfoot>
-                                  <tr>
-                                    <th>{{ dataTable.footerRow[0] }}</th>
-                                    <th>{{ dataTable.footerRow[1] }}</th>
-                                    <th>{{ dataTable.footerRow[2] }}</th>
-                                    <th>{{ dataTable.footerRow[3] }}</th>
-                                    <th>{{ dataTable.footerRow[4] }}</th>
-                                    <th class="text-right">{{ dataTable.footerRow[5] }}</th>
-                                  </tr>
-                              </tfoot>
-                              <tbody>
-                                  <tr *ngFor="let row of dataTable.dataRows">
-                                      <td>{{row[0]}}</td>
-                                      <td>{{row[1]}}</td>
-                                      <td>{{row[2]}}</td>
-                                      <td>{{row[3]}}</td>
-                                      <td>{{row[4]}}</td>
-                                      <td class="text-right">
-                                        <a href="#" class="btn btn-link btn-info btn-just-icon like"><i class="material-icons">favorite</i></a>
-                                        <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
-                                        <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
-                                      </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-                  <!-- end content-->
+    
+                <div class="col-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Search for an Event" type="search" id="searchText" name="searchText"
+                      (focus)="changeEmpty()" required>
+                  </mat-form-field>
+                </div>
+    
+                <div class="col-5" *ngIf='isEmpty'>
+                  <mat-error>
+                    Text field is empty
+                  </mat-error>
+                </div>
+    
+                <div class="col-2">
+                  <button mat-raised-button type="submit" class="btn btn-sm" id="searchButton" name="searchButton"
+                    (click)="searchEvent()"> <i class="material-icons">search</i> Search Event</button>
+    
+                </div>
               </div>
-              <!--  end card  -->
+            </div>
           </div>
-          <!-- end col-md-12 -->
+        </div>
+
+    <div class="row" *ngIf="searchResult" >
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary card-header-icon">
+            <div class="card-icon">
+              <i class="material-icons">assignment</i>
+            </div>
+            <h4 class="card-title">Table of Events</h4>
+          </div>
+          <div class="card-body">
+            <div class="toolbar">
+              <!--        Here you can write extra buttons/actions for the toolbar              -->
+            </div>
+            <div class="material-datatables">
+              <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0"
+                width="100%" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>{{ dataTable.headerRow[0] }}</th>
+                    <th>{{ dataTable.headerRow[1] }}</th>
+                    <th>{{ dataTable.headerRow[2] }}</th>
+                    <th>{{ dataTable.headerRow[3] }}</th>
+                    <th>{{ dataTable.headerRow[4] }}</th>
+                    <th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of dataTable.dataRows">
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                    <td>{{row[4]}}</td>
+                    <td class="td-actions text-right ">
+                        <div class="btn-group">
+                            <button mat-raised-button type="button" class="btn btn-info btn-link">
+                                <!--i class="material-icons">info</i-->Info
+                              </button>
+                              <button mat-raised-button type="button" class="btn btn-warning btn-link" (click)="editEvent()" >
+                                <!--i class="material-icons">edit</i-->Edit
+                              </button>
+                              <button mat-raised-button type="button" class="btn btn-danger btn-link">
+                                <!--i class="material-icons">close</i-->Delete
+                              </button>
+                          </div>
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- end content -->
+        </div>
+        <!--  end card  -->
       </div>
-      <!-- end row -->
+      <!-- end col-md-12 -->
+    </div>
+    <!-- end row -->
   </div>
 </div>
+
+<!--
+
+                        <div class="btn-group">
+                          <button mat-raised-button type="button" class="btn btn-info btn-link col-1">
+                              <i class="material-icons">info</i>Info
+                            </button>
+                            <button mat-raised-button type="button" class="btn btn-success btn-link col-1">
+                              <i class="material-icons">edit</i>Edit
+                            </button>
+                            <button mat-raised-button type="button" class="btn btn-danger btn-link col-1">
+                              <i class="material-icons">close</i>Delete
+                            </button>
+                      </div>
+
+              <div class="btn-group">
+                <button mat-raised-button type="button" class="btn btn-info">Left</button>
+                <button mat-raised-button type="button" class="btn btn-info">Middle</button>
+                <button mat-raised-button type="button" class="btn btn-info">Right</button>
+              </div>
+
+-->
