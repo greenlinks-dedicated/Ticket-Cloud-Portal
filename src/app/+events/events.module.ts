@@ -14,6 +14,7 @@ import { EventRoutes } from './events.routing';
 import { View_EventsComponent } from './View_Events/View_Events.component';
 import { Create_EventComponent } from './Create_Event/Create_Event.component'
 import { Edit_EventComponent } from './Edit_Event/Edit_Event.component';
+import { Event_InfoComponent } from './Event_Info/Event_Info.component';
 
 @NgModule({
     imports: [
@@ -28,7 +29,8 @@ import { Edit_EventComponent } from './Edit_Event/Edit_Event.component';
     declarations: [
         View_EventsComponent,
         Create_EventComponent,
-        Edit_EventComponent
+        Edit_EventComponent,
+        Event_InfoComponent
     ]
 })
 

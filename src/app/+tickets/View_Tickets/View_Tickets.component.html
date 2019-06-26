@@ -58,21 +58,17 @@
                   width="100%" style="width:100%">
                   <thead>
                     <tr>
-                      <th>{{ dataTable.headerRow[0] }}</th>
-                      <th>{{ dataTable.headerRow[1] }}</th>
-                      <th>{{ dataTable.headerRow[2] }}</th>
-                      <th>{{ dataTable.headerRow[3] }}</th>
-                      <th>{{ dataTable.headerRow[4] }}</th>
-                      <th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>
+                      <th>Ticket ID</th>
+                      <th>Event Name</th>
+                      <th>Ticket Type</th>
+                      <th class="disabled-sorting text-right">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let row of dataTable.dataRows">
-                      <td>{{row[0]}}</td>
-                      <td>{{row[1]}}</td>
-                      <td>{{row[2]}}</td>
-                      <td>{{row[3]}}</td>
-                      <td>{{row[4]}}</td>
+                    <tr >
+                      <td>#ID</td>
+                      <td>EVENT NAME</td>
+                      <td>GENERAL</td>
                       <td class="td-actions text-right ">
                           <div class="btn-group">
                               <button mat-raised-button type="button" class="btn btn-info btn-link">

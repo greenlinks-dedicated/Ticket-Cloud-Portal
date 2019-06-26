@@ -6,6 +6,7 @@ import { MdModule } from '../md/md.module';
 import { MaterialModule } from '../app.module';
 
 import { View_Attandance_ListComponent } from './View_Attandance_List/View_Attandance_List.component';
+import { Edit_AttandeeComponent } from './Edit_Attandee/Edit_Attandee.component';
 import { AttandeesRoutes } from './attandees.routing';
 
 @NgModule({
@@ -16,7 +17,10 @@ import { AttandeesRoutes } from './attandees.routing';
         MdModule,
         MaterialModule
     ],
-    declarations: [View_Attandance_ListComponent]
+    declarations: [
+        View_Attandance_ListComponent,
+        Edit_AttandeeComponent
+    ]
 })
 
 export class AttandeesModule {}

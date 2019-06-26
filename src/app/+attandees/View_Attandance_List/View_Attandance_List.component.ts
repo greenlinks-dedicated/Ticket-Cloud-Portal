@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 
 declare interface DataTable {
@@ -18,7 +19,7 @@ export class View_Attandance_ListComponent implements OnInit {
   isEmpty = false
   searchResult = false
   searchInput
-  constructor() {}
+  constructor( private router: Router) {}
   
 
   ngOnInit() {
@@ -129,6 +130,10 @@ export class View_Attandance_ListComponent implements OnInit {
       this.isEmpty = false
       this.searchResult = true
     }
+  }
+
+  gotoEditAttandee() {
+    this.router.navigate(['/attandees/editattandee'])
   }
 
 }

@@ -1,38 +1,88 @@
 <div class="main-content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-header card-header-icon card-header-rose">
-              <div class="card-icon">
-                <i class="material-icons">perm_identity</i>
-              </div>
-              <h4 class="card-title">Edit Profile -
-                <small class="category">Complete your profile</small>
-              </h4>
-            </div>
-            <div class="card-body">
-              <form>
-                <div class="row">
-                  <div class="col-md-5">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Company (disabled)</label>
-                      <input type="text" class="form-control" disabled>
-                    </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-categories">
+          <h4 class=" title text-center">Profile of <b>Name Surname</b></h4>
+          <br />
+          <ul class="nav nav-pills nav-pills-primary nav-pills-icons justify-content-center" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#client" role="tablist">
+                <!-- i class="material-icons">info</i --> Client Info
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-toggle="tab" href="#banking" role="tablist">
+                <!-- i class="material-icons">payment</i --> Banking Details
+              </a>
+            </li>
+          </ul>
+          <div class="tab-content tab-space tab-subcategories">
+
+            <div class="tab-pane active" id="client">
+
+              <div class="col-12">
+                <div class="card text-center ml-auto mr-auto">
+                  <div class="card-header card-header-icon card-header-rose">
+                    <h4 class="card-title">Profile Information
+                      <small class="category"></small>
+                    </h4>
                   </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Username</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Email address</label>
-                      <input type="email" class="form-control">
-                    </div>
+                  <div class="card-body col-12">
+                    <form>
+
+                      <div class="row">
+
+                        <div class="col-5">
+                          <h5 class="card-category text-gray">First Name: <span class="card-title ">(FIRSTNAME)</span>
+                          </h5>
+                        </div>
+
+                        <div class="col-5">
+                          <h5 class="card-category text-gray">Last Name: <span class="card-title ">(LASTNAME)</span>
+                          </h5>
+                        </div>
+
+                      </div>
+                      <div class="row">
+
+                        <div class="col-5">
+                          <h5 class="card-category text-gray">E-mail Address: <span
+                              class="card-title ">(example@mail.com)</span></h5>
+                        </div>
+
+                        <div class="col-5">
+                          <h5 class="card-category text-gray">Contact Number: <span
+                              class="card-title ">(1234567890)</span></h5>
+                        </div>
+                      </div>
+                      <div class="row">
+
+                        <div class="col-5">
+                          <h5 class="card-category text-gray">Company Name: <span
+                              class="card-title ">(COMPANYNAME)</span></h5>
+                        </div>
+
+                        <div class="col-5">
+                          <h5 class="card-category text-gray">Province: <span class="card-title ">(PROVINCE)</span></h5>
+                        </div>
+
+                      </div>
+
+                    </form>
                   </div>
                 </div>
+              </div>
+              <!--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+
+              <div class="card" hidden>
+
+                <h5 class="card-title col-sm-6"> (FIRSTNAME) </h5>
+
+                <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                <h4 class="card-title">Alec Thompson</h4>
+                <p class="card-description"></p>
+
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -44,6 +94,27 @@
                     <div class="form-group">
                       <label class="bmd-label-floating">Last Name</label>
                       <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Company Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Email address</label>
+                      <input type="email" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -80,37 +151,89 @@
                     <div class="form-group">
                       <label>About Me</label>
                       <div class="form-group">
-                        <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                        <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two
+                          seat Lambo.</label>
                         <textarea class="form-control" rows="5"></textarea>
                       </div>
                     </div>
                   </div>
                 </div>
-                <button mat-raised-button type="submit" class="btn btn-rose pull-right">Update Profile</button>
-                <div class="clearfix"></div>
-              </form>
+
+
+                <div class="card-header">
+                  <h4 class="card-title">Description about product</h4>
+                  <p class="card-category">
+                    More information here
+                  </p>
+                </div>
+                <div class="card-body">
+                  Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate
+                  B2C users after installed base benefits.
+                  <br>
+                  <br> Dramatically visualize customer directed convergence without revolutionary ROI.
+                </div>
+              </div>
+              <!--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+
             </div>
+            <div class="tab-pane" id="banking">
+              <div class="card text-center ml-auto mr-auto">
+                <div class="card-header ">
+                  <h4 class="card-title uppercase">BANKING DETAILS</h4>
+                  <p class="card-category mr-auto">
+                    Bank Name
+                  </p>
+                </div>
+                <div class="card-body">
+                  <p class="card-category mr-auto">
+                    More Banking information here
+                  </p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="tab-pane" id="link9">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">Legal info of the product</h4>
+                  <p class="card-category">
+                    More information here
+                  </p>
+                </div>
+                <div class="card-body">
+                  Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate
+                  one-to-one customer service with robust ideas.
+                  <br>
+                  <br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="link10">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">Help center</h4>
+                  <p class="card-category">
+                    More information here
+                  </p>
+                </div>
+                <div class="card-body">
+                  From the seamless transition of glass and metal to the streamlined profile, every detail was carefully
+                  considered to enhance your experience. So while its display is larger, the phone feels just right.
+                  <br>
+                  <br> Another Text. The first thing you notice when you hold the phone is how great it feels in your
+                  hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a
+                  remarkable, simplified design.
+                </div>
+              </div>
+            </div>
+
+
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-profile">
-            <div class="card-avatar">
-              <a href="#pablo">
-                <img class="img" src="./assets/img/faces/marc.jpg" />
-              </a>
-            </div>
-            <div class="card-body">
-              <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-              <h4 class="card-title">Alec Thompson</h4>
-              <p class="card-description">
-                Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-              </p>
-              <a href="#pablo" class="btn btn-rose btn-round">Follow</a>
-            </div>
-          </div>
-          <button mat-raised-button class="btn btn-rose pull-right">Edit Profile</button>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

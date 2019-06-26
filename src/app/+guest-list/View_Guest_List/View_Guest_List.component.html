@@ -19,7 +19,7 @@
     
                 <div class="col-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Search for Guests" type="search" id="searchText" name="searchText"
+                    <input matInput placeholder="Search for Guest(s)" type="search" id="searchText" name="searchText"
                       (focus)="changeEmpty()" required>
                   </mat-form-field>
                 </div>
@@ -58,21 +58,21 @@
                 width="100%" style="width:100%">
                 <thead>
                   <tr>
-                    <th>{{ dataTable.headerRow[0] }}</th>
-                    <th>{{ dataTable.headerRow[1] }}</th>
-                    <th>{{ dataTable.headerRow[2] }}</th>
-                    <th>{{ dataTable.headerRow[3] }}</th>
-                    <th>{{ dataTable.headerRow[4] }}</th>
-                    <th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>
+                    <th>Guest ID</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Contact Number</th>
+                    <th>E-mail Address</th>
+                    <th class="disabled-sorting text-right">Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let row of dataTable.dataRows">
-                    <td>{{row[0]}}</td>
-                    <td>{{row[1]}}</td>
-                    <td>{{row[2]}}</td>
-                    <td>{{row[3]}}</td>
-                    <td>{{row[4]}}</td>
+                  <tr>
+                    <td>#ID</td>
+                    <td>guestname</td>
+                    <td>guestsurname</td>
+                    <td>1234567890</td>
+                    <td>example@mail.com</td>
                     <td class="td-actions text-right ">
                         <div class="btn-group">
                             <button mat-raised-button type="button" class="btn btn-info btn-link">

@@ -1,7 +1,6 @@
 <div class="main-content">
     <div class="container-fluid">
   
-      <!--  SEARCH TAB    -->
         <div class="row" hidden>
             <div class="col-md-12 ml-auto mr-auto">
               <div class="card">
@@ -20,7 +19,7 @@
       
                   <div class="col-6">
                     <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Search Event" type="search" id="searchText" name="searchText"
+                      <input matInput placeholder="Search for an Event" type="search" id="searchText" name="searchText"
                         (focus)="changeEmpty()" required>
                     </mat-form-field>
                   </div>
@@ -33,7 +32,7 @@
       
                   <div class="col-2">
                     <button mat-raised-button type="submit" class="btn btn-sm" id="searchButton" name="searchButton"
-                      (click)="searchEvent()"> <i class="material-icons">search</i> Search</button>
+                      (click)="searchEvent()"> <i class="material-icons">search</i> Search Event</button>
       
                   </div>
                 </div>
@@ -41,14 +40,14 @@
             </div>
           </div>
   <!--  *ngIf="searchResult"  -->
-      <div class="row"  >
+      <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-primary card-header-icon">
               <div class="card-icon">
                 <i class="material-icons">assignment</i>
               </div>
-              <h4 class="card-title">List of Attandees</h4>
+              <h4 class="card-title">Table of Events</h4>
             </div>
             <div class="card-body">
               <div class="toolbar">
@@ -59,32 +58,32 @@
                   width="100%" style="width:100%">
                   <thead>
                     <tr>
-                      <th>Attandee ID</th>
-                      <th>Name</th>
-                      <th>Surname</th>
-                      <th>Email</th>
-                      <th>Contact Number</th>
+                      <th>Event Name</th>
+                      <th>Attandance No.</th>
+                      <th>Venue</th>
+                      <th>Date</th>
+                      <th>Event Status</th>
                       <th class="disabled-sorting text-right">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>#ID</td>
-                      <td>attandeename</td>
-                      <td>attandeesurname</td>
-                      <td>Attandee@mail.com</td>
-                      <td>1234567890</td>
+                    <tr >
+                      <td>(EVENT NAME)</td>
+                      <td>#number</td>
+                      <td>(EVENT VENUE)</td>
+                      <td>dd-mm-yyyy</td>
+                      <td><span class="background-round btn-success text-center" disabled>status</span></td>
                       <td class="td-actions text-right ">
                           <div class="btn-group">
-                              <button mat-raised-button type="button" class="btn btn-info btn-link">
-                                  <!--i class="material-icons">info</i-->Info
+                              <button mat-raised-button type="button" class="btn btn-info btn-link" (click)="gotoViewSales()">
+                                  <!--i class="material-icons">info</i--> View Sales
                                 </button>
-                                <button mat-raised-button type="button" class="btn btn-warning btn-link" (click)="gotoEditAttandee()">
-                                  <!--i class="material-icons">edit</i-->Edit
-                                </button>
-                                <button mat-raised-button type="button" class="btn btn-danger btn-link">
-                                  <!--i class="material-icons">close</i-->Delete
-                                </button>
+                                <!--button mat-raised-button type="button" class="btn btn-warning btn-link" (click)="editEvent()" >
+                                  <i class="material-icons">edit</i>Edit
+                                </button-->
+                                <!--button mat-raised-button type="button" class="btn btn-danger btn-link">
+                                  <i class="material-icons">close</i>Delete
+                                </button-->
                             </div>
                       </td>
   
@@ -102,25 +101,3 @@
       <!-- end row -->
     </div>
   </div>
-  
-  <!--
-  
-                          <div class="btn-group">
-                            <button mat-raised-button type="button" class="btn btn-info btn-link col-1">
-                                <i class="material-icons">info</i>Info
-                              </button>
-                              <button mat-raised-button type="button" class="btn btn-success btn-link col-1">
-                                <i class="material-icons">edit</i>Edit
-                              </button>
-                              <button mat-raised-button type="button" class="btn btn-danger btn-link col-1">
-                                <i class="material-icons">close</i>Delete
-                              </button>
-                        </div>
-  
-                <div class="btn-group">
-                  <button mat-raised-button type="button" class="btn btn-info">Left</button>
-                  <button mat-raised-button type="button" class="btn btn-info">Middle</button>
-                  <button mat-raised-button type="button" class="btn btn-info">Right</button>
-                </div>
-  
-  -->

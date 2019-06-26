@@ -36,6 +36,10 @@ export const AppRoutes: Routes = [
                 path: 'attandees',
                 loadChildren: './+attandees/attandees.module#AttandeesModule'
             },
+            { //    SALES MODULE 
+                path: 'sales',
+                loadChildren: './+sales/sales.module#SalesModule'
+            },
             { //    STAFF MODULE 
                 path: 'staff',
                 loadChildren: './+staff/staff.module#StaffModule'

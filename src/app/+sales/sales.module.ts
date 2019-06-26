@@ -7,17 +7,17 @@ import { TagInputModule } from 'ngx-chips';
 import { SelectModule } from 'ng2-select';
 import { MaterialModule } from '../app.module';
 
-import { ProfileRoutes } from './profile.routing';
+import { SalesRoutes } from './sales.routing';
 
 
-import { View_profileComponent } from './view_profile/view_profile.component';
-import { View_banking_detailsComponent } from './view_banking_details/view_banking_details.component'
-import { Update_profileComponent } from './update_profile/update_profile.component'
+import { View_SalesComponent } from './View_Sales/View_Sales.component';
+import { Search_Event_SalesComponent } from './Search_Event_Sales/Search_Event_Sales.component';
+
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild(ProfileRoutes),
+        RouterModule.forChild(SalesRoutes),
         FormsModule,
         ReactiveFormsModule,
         NouisliderModule,
@@ -25,10 +25,9 @@ import { Update_profileComponent } from './update_profile/update_profile.compone
         MaterialModule
     ],
     declarations: [
-        View_profileComponent,
-        View_banking_detailsComponent,
-        Update_profileComponent        
+        View_SalesComponent,
+        Search_Event_SalesComponent        
     ]
 })
 
-export class ProfileModule { }
+export class SalesModule { }

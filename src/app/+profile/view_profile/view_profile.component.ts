@@ -9,6 +9,7 @@ export class View_profileComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 

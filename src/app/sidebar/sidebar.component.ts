@@ -20,9 +20,58 @@ export interface ChildrenItems {
     type?: string;
 }
 
-//Menu Items
+/*Menu Items            
+            <a class="dropdown-item" href="sales/searcheventsales">View Sales </a>
+*/
 export const ROUTES: RouteInfo[] = [{
-        path: '/dashboard',
+    path: '/profile',
+    title: 'My Profile',
+    type: 'sub',
+    icontype: 'person',
+    collapse: 'profile',
+    children: [
+        {path: 'viewprofile', title: 'View Profile', ab:'VP'},
+        {path: 'editprofile', title: 'Update Profile', ab:'UP'}
+    ]
+},{
+    path: '/events',
+    title: 'Event',
+    type: 'sub',
+    icontype: 'person',
+    collapse: 'event',
+    children: [
+        {path: 'createevent', title: 'Create Event', ab:'CE'},
+        {path: 'viewevents', title: 'View Events', ab:'ME'}
+    ]
+},{
+    path: '/tickets',
+    title: 'Tickets',
+    type: 'sub',
+    icontype: 'person',
+    collapse: 'ticket',
+    children: [
+        {path: 'viewtickets', title: 'View Tickets', ab:'VT'}
+    ]
+},{
+    path: '/attandees',
+    title: 'Attandees',
+    type: 'sub',
+    icontype: 'people',
+    collapse: 'attandees',
+    children: [
+        {path: 'viewattandancelist', title: 'View Attandees', ab:'VA'}
+    ]
+},{
+    path: '/sales/searcheventsales',
+    title: 'Sales',
+    type: 'link',
+    icontype: 'equalizer'
+},
+
+/*=============     TEMPLATE SAMPLE CODE        ==================================================================================================================== */
+
+{
+        path: '/Dashboard',
         title: 'Dashboard',
         type: 'link',
         icontype: 'dashboard'

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-Edit_Attandee',
-  templateUrl: './Edit_Attandee.component.html',
-  styleUrls: ['./Edit_Attandee.component.css']
+  selector: 'app-update_profile',
+  templateUrl: './update_profile.component.html',
+  styleUrls: ['./update_profile.component.css']
 })
-export class Edit_AttandeeComponent implements OnInit {
+export class Update_profileComponent implements OnInit {
+
+  x= 0
 
   constructor() { }
 
